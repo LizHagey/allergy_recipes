@@ -27,6 +27,7 @@ switch( $action ) {
         $category_name = get_category_name($category_id);
         $categories = get_categories();
         $recipes = get_recipes_by_category($category_id);
+               
         include('../recipe_manager/view/recipe_list.php');
         break;
 
@@ -141,7 +142,8 @@ switch( $action ) {
             header("Location: .?category_id=$category_id");
         } 
         break;
-    
+        
+            
 }
 
 

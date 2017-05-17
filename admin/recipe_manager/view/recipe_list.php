@@ -19,14 +19,19 @@
     </aside>
 
     <section>
+        <p><a href="?action=show_add_form">Add Recipe</a></p>
+        <p class="last_paragraph"><a href="?action=list_categories">List Categories</a></p>
+        <br>
+        
         <!-- display recipes -->
         <h2><?php echo $category_name; ?></h2>
         
             <?php foreach ($recipes as $recipe) : ?>
             
         <h1><?php echo $recipe['recipeName']; ?></h1>
-            <img src="/admin/img_upload/images/<?php echo htmlspecialchars($recipe['imageCode']); ?>.jpg"
-                     alt="<?php echo $recipe['imageName']; ?>">   
+                
+        <img src="/admin/img_upload/images/<?php echo $recipe['imageCode']; ?>.jpg"
+                     alt="<?php echo $recipe['imageName']; ?>">  
              <table>
                  <tr>
                      <th>Gluten Free</th>
@@ -77,8 +82,7 @@
             
         </table>
              <?php endforeach; ?>
-        <p><a href="?action=show_add_form">Add Recipe</a></p>
-        <p class="last_paragraph"><a href="?action=list_categories">List Categories</a></p>        
+                
     </section>
 </main>
 <?php include '../view/footer.php'; ?>

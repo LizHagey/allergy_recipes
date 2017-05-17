@@ -3,12 +3,66 @@ function get_recipes_by_category($category_id) {
     global $db;
     $query = 'SELECT * FROM recipes
               WHERE recipes.categoryID = :category_id
-              ORDER BY recipeID';
+              ORDER BY recipeID DESC';
     try {
     $statement = $db->prepare($query);
     $statement->bindValue(":category_id", $category_id);
     $statement->execute();
     $recipe = $statement->fetchAll();
+    $statement->closeCursor();
+    return $recipe;
+    }catch(PDOException $e) {
+            display_db_error($e->getMessage());
+    }
+}
+
+function get_recipes_by_allergy($category_id) {
+    global $db;
+    $query = 'SELECT * FROM recipes
+              WHERE recipes.glutenFree, recipes.dairyFree, recipes.peanutFree,
+              recipes.treeNutFree, recipes.eggFree, recipes.soyFree, recipes.fishFree,
+              recipes.shellFishFree
+              ORDER BY recipeID DESC
+              HAVING "y"';
+    try {
+    $statement = $db->prepare($query);
+    $statement->bindValue(":category_id", $category_id);
+    $statement->execute();
+    $recipe = $statement->mysql_fetch_array($recipe);
+    $statement->closeCursor();
+    return $recipe;
+    }catch(PDOException $e) {
+            display_db_error($e->getMessage());
+    }
+}
+
+function get_recipes_by_allergy_one($category_id) {
+    global $db;
+    $a = implode("','",$_POST['allergy']); 
+
+    $query = "SELECT * FROM recipes "
+            . "WHERE allergy IN ('$a')"
+            . "ORDER BY recipeID DESC' "
+            . "HAVING 'y'"; 
+    $recipe = mysql_query($query) or die(mysql_error()); 
+    while ($row=mysql_fetch_array($recipe)) { 
+    echo $row['name'] , " | " , $row['ingredients'] , "<br>"; 
+        return $recipe;
+    }
+} 
+
+function get_recipes_by_allergy_two($category_id) {
+    global $db;
+    $a = implode("','",$_POST['allergy']);
+    $query = 'SELECT * FROM recipes
+              WHERE allergy IN ("$a")
+              ORDER BY recipeID DESC
+              HAVING "y"';
+    try {
+    $statement = $db->prepare($query);
+    $statement->bindValue(":category_id", $category_id);
+    $statement->execute();
+    $recipe = $statement->mysql_fetch_array();
     $statement->closeCursor();
     return $recipe;
     }catch(PDOException $e) {

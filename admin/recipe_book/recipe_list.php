@@ -32,6 +32,33 @@
             </li>
             <?php endforeach; ?>
         </ul>
-    </section>
+    </section><br><br>
+            
+    <form action="index.php" method="post" id="view_specific_allergyfree_recipe_form">
+        <input type="hidden" name="action" value="get_recipes_by_allergy">
+        
+       <label>Check if applies to recipe:</label><br>
+        <input type="checkbox" name="allergy[]" value="1">Gluten Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="2">Dairy Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="3">Peanut Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="4">Tree Nut Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="5">Egg Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="6">Soy Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="7">Fish Free<br>
+        
+        <input type="checkbox" name="allergy[]" value="8">Shell Fish Free<br>
+        <br>
+        
+        <label>&nbsp;</label>
+        <input type="submit" value="View Specific Allergy Free Recipes" />
+        <br>
+      </form>
+            
 </main>
 <?php include '../view/footer.php'; ?>

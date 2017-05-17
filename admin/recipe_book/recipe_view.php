@@ -8,8 +8,8 @@
         <h1 id="recipeViewHeading"><?php echo $recipeName; ?></h1>
         <div id="left_column">
             <p>
-                <img id="mainImg" src="/admin/img_upload/images/<?php echo $imageCode; ?>"
-                    alt="<?php echo $imageName; ?>" />
+                <img id="mainImg" src="/admin/img_upload/images/<?php echo $recipe['imageCode']; ?>.jpg"
+                     alt="<?php echo $recipe['imageName']; ?>">
             </p>
         </div>
         <!-- added 8/5/2016 -->
