@@ -1,24 +1,18 @@
 /* the styles for the HTML elements */
 html {
-    background: url(images/Background.jpg);
+    background: url(images/woodBackground.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    width: 70%;
     margin: 0 auto;
-    padding: 0 2em;
-    background-color: rgba(255,255,255,.9);
-    -moz-box-shadow: 15px 20px 15px rgba(0, 0, 0,0.5);
-    -webkit-box-shadow: 15px 20px 15px rgba(0, 0, 0, .5);
-    box-shadow: 15px 20px 15px rgba(0, 0, 0, .5);
 }
 header {
-    border-bottom: 10px solid #801815;
-    padding: .5em 0;
-    background-color: #fff;
+    border-bottom: 20px solid #51110F;
+    padding: 20px;
+    background-color: #231F20;
 }
 header img {
     width: 25%;
@@ -27,9 +21,169 @@ header img {
 main {
 
 }
-aside {
+/*aside {
     float: left;
     width: 125px;
+    margin-right: 1%;
+}*/
+.mainSection {
+    margin-left: 6%;
+}
+#categories {
+    background-color: #231F20;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    padding: 5%;
+    
+}
+aside {
+    background-color: #231F20;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    padding:2%;
+    width: 10%;
+    float: right;
+}
+.recipeTwo {
+    background-color: #F4E8D9;
+    box-shadow: 20px 20px 5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 20px 20px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 20px 20px 5px rgba(0,0,0,0.4);
+    width: 43%;
+    margin: 3%;
+    float: left;
+}
+.recipesMng {
+    background-color: #F4E8D9;
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+}
+.ingred {
+    margin-left: 2%;
+}
+.recipeHead {
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    background-color: #231F20;
+    border: 8px solid #51110F;
+    width: 25%;
+    margin: auto;
+    margin-top: 20px;
+}
+.recipeName {
+    text-decoration: none;
+    font-size: 2em;
+    color: #F4E8D9;
+    background-color: #51110F;
+    opacity: 0.9;
+    padding: 15px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 12%;
+    width: 20%;
+    z-index: 9999;
+}
+.recipeName:hover {
+    opacity: 1.0;
+}
+.recipeImage {
+   border: 15px solid black; 
+   box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -moz-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+   width: 283px;
+   margin-top: -20px;
+   margin-bottom: -15px;
+}
+.recipeMngImage {
+   border: 15px solid black; 
+   box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -moz-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    margin-left: 1.5%;
+}
+.recipeMngName {
+    text-decoration: none;
+    font-size: 2em;
+    color: #F4E8D9;
+    background-color: #51110F;
+    padding: 15px;
+    margin-top: 0px;
+}
+.allergyTable{
+    color: #231F20;
+    padding-right: 10%;
+    float: right;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 3%;
+}
+#checklist {
+    right: 2%;
+    position: fixed;
+    color: #F4E8D9;
+    background-color: #231F20;
+     box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    -moz-box-shadow: 15px 15px 8px rgba(0,0,0,0.4);
+    padding: 1%;
+    margin-top: 20px;
+}
+#checklistHead {
+   color: #F4E8D9;
+   font-size: 1.4em;
+}
+input[type=submit] {
+    width: 12%;
+    padding: 15px;
+    color: white;
+    background-color: #801815;
+    border: none;
+    font-size: 1em;
+    margin: 10px;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+     border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    float: left;
+}
+#checklist>form>input[type=submit] {
+    width: 80%;
+    padding: 15px;
+    color: white;
+    background-color: #801815;
+    border: none;
+    font-size: 1em;
+    margin: 10px;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+     border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    float: left;
+}
+.manageRecipes {
+    width: 10%;
+    padding: 15px;
+    color: white;
+    background-color: #801815;
+    border: none;
+    font-size: 1em;
+    margin: 10px;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+     border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    float: left;
 }
 
 section {
@@ -38,11 +192,15 @@ section {
 }
 footer {
     clear: both;
-    border-top: 2px solid #801815;
+    
 }
 footer p {
     text-align: right;
-    font-size: 80%;
+    font-size: 100%;
+    color: #F4E8D9;
+    background-color: black;
+    padding: 20px;
+    padding-top: 150px;
 }
 h1 {
     font-size: 150%;
@@ -53,7 +211,7 @@ h2 {
     margin: .25em 0 .5em;
 }
 h1, h2 {
-    color: #801815;
+    color: #F4E8D9;
 }
 ul {
     list-style-type: none;
@@ -65,7 +223,7 @@ li {
     padding-bottom: 0.5em;
 }
 a {
-    color: #004304;
+    color: #F4E8D9;
     font-weight: bold;
 }
 a:hover {
@@ -74,13 +232,8 @@ a:hover {
 br {
     clear: left;
 }
-#categoryTable {
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-bottom: 1em;
-    width: 240px;
-}
-table {
+
+/*table {
     border: 1px solid black;
     border-collapse: collapse;
     margin-bottom: 1em;
@@ -94,7 +247,7 @@ tbody {
 table td {
     overflow: hidden;
     text-overflow: ellipsis;
-}
+}*/
 #one {
     width: 15%;
 }
@@ -119,11 +272,11 @@ tr .wide{
     overflow: scroll;
     
 }
-td, th {
+/*td, th {
     border: 1px dashed black;
     padding: .2em .5em .2em .5em;
     text-align: left;
-}
+}*/
 
 form {
 
@@ -158,11 +311,23 @@ form {
 }
 
 /* Additional styles for the Product Manager application */
+.add_recipe_main {
+    background-color: #F4E8D9;
+    padding: 2%;
+}
+h1#add_recipe_head {
+    width: 68%;
+    background-color: #801918;
+    padding: 1%;
+}
 #add_recipe_form {
     margin: .5em 0;
+    width: 70%;
+    margin: auto;
 }
 #add_recipe_form label {
-    width: 6em;
+    width: 16em;
+    font-size: 1em;
     padding-right: 1em;
     padding-bottom: .5em;
     float: left;
@@ -171,17 +336,44 @@ form {
     float: left;
 }
 #add_recipe_form input[text] {
-    width: 15em;
+    width: 19em;
 }
 #add_recipe_form textarea {
     float: left;
-    width: 20em;
+    width: 80%;
+}
+#add_recipe_head {
+    margin: auto;
+}
+/*Category Edit Page Style*/
+.edit_category {
+    background-color: #F4E8D9;
+    width: 70%;
+    margin: auto;
+    padding: 1%;
+}
+#categoryTable {
+    margin-bottom: 1em;
+    width: 25%;
+    table-layout: fixed;
 }
 
+#categoryTable td input[type=submit]{
+    width: 100%;
+    padding: 10px;
+}
+
+/*Edit Recipe Page*/
+.edit_recipe_main {
+    background-color: #F4E8D9;
+    width: 70%;
+    margin: auto;
+    padding: 1%;
+}
 #edit_recipe label {
     width: 6em;
     padding-right: 1em;
-    padding-bottom: .5em;
+    padding-bottom: 1em;
     float: left;
 }
 #edit_recipe input {
@@ -192,5 +384,5 @@ form {
 }
 #edit_recipe textarea {
     float: left;
-    width: 20em;
+    width: 70%;
 }

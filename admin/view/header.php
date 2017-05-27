@@ -9,4 +9,4 @@
 
 <!-- the body section -->
 <body>
-    <header><a href ="/admin/index.php"><img src="../images/Logo.jpg" alt="Logo"></a></header>
+    <header><a href ="/admin/index.php"><img src="../images/logoLight.png" alt="Logo"></a></header>

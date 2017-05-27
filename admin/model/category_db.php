@@ -6,7 +6,7 @@ function get_categories() {
     try {
     $statement = $db->prepare($query);
     $statement->execute();
-    return $statement;    
+    return $statement->fetchAll();    
     }catch(PDOException $e) {
             display_db_error($e->getMessage());
     }

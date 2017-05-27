@@ -23,7 +23,7 @@ else
 
 <!-- the body section -->
 <body>
-    <header><img src="/admin/images/Logo.jpg" alt="Logo"></header>
+    <header><img src="/admin/images/logoLight.png" alt="Logo"></header>
 
 <main>
     <h1>Menu</h1>

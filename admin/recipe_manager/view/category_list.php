@@ -1,10 +1,11 @@
 <?php include '../view/header.php'; ?>
 <main>
 
-    <h1>Category List</h1>
+    <h1 class="recipeHead">Category List</h1>
+    <div class="edit_category">
     <table id="categoryTable">
         <tr>
-            <th>Name</th>
+            <th>Category Name</th>
             <th>&nbsp;</th>
         </tr>        
         <!-- add category rows here -->
@@ -23,8 +24,8 @@
     <label>Name</label>
     <form action="index.php" method="post">
         <input type="hidden" name="action" value='add_category'>
-        <input type='text' name='name'>
-        <input type="submit" value="Add" /><br>
+        <input type='text' name='name'><br>
+        <input type="submit" value="Add Category" /><br>
     </form>
         <br>
 
@@ -32,7 +33,7 @@
     <!-- add code for form here -->
 
     <p><a href="index.php?action=list_recipes">List Recipes</a></p>
-
+</div>
 </main>
 <?php include '../view/footer.php'; ?>
 

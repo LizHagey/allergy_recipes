@@ -1,6 +1,7 @@
 <?php include '../view/header.php'; ?>
 <main>
     <h1>Edit Recipe</h1>
+    <div class="edit_recipe_main">
     <form action="index.php" method="post" id="edit_recipe">
         <input type="hidden" name="action" value="edit_recipe">
 
@@ -37,11 +38,11 @@
 
         <label>Ingredients:</label>
         <textarea name="ingredients" cols="30" rows="20" ><?php echo $recipe['ingredients'] ?></textarea>
-        <br>
+        <br><br>
         
         <label>Directions: </label>
         <textarea name="directions" cols="30" rows="20"><?php echo $recipe['directions']?></textarea>
-        <br>
+        <br><br>
         
         <label>Image Code:</label>
         <input type="text" name="imageCode" value='<?php echo htmlspecialchars($recipe['imageCode'])?>'/>
@@ -61,7 +62,7 @@
     <p class="last_paragraph">
         <a href="index.php?action=list_recipes">View Recipe List</a>
     </p>
-
+    </div>
 </main>
 <?php include '../view/footer.php'; ?>
 
