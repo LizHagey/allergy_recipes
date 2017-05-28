@@ -6,10 +6,9 @@
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-    <header>
-        <h1>Upload Image</h1>
-    </header>
-    <main>
+    <h2 class="recipeHead">Upload Image</h2>
+    
+    <main id="upload_image_main">
         <h2>Images to be uploaded</h2>
        
         <form id="upload_form"
@@ -23,7 +22,7 @@
         <br>
         <h2>Images in the directory</h2>
         <?php if (count($files) == 0) : ?>
-            <p>No images uploaded.</p>
+            <p id="upload_p">No images uploaded.</p>
         <?php else: ?>
             <ul>
             <?php foreach($files as $filename) :
@@ -42,7 +41,7 @@
             </ul>
         <?php endif; ?>
                       
-            <p><a href="../recipe_manager/index.php">Return to Recipe Manager</a></p>
+            <p class="manageRecipes"><a href="../recipe_manager/index.php">Return to Recipe Manager</a></p>
             <br><br><br>
     </main>
 </body>
