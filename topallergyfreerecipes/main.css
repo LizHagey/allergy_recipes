@@ -9,15 +9,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
 }
-header {
-    border-bottom: 20px solid #51110F;
-    padding: 20px;
-    background-color: #231F20;
-}
-header img {
-    width: 25%;
-    height: auto;
-}
+
 main {
 
 }
@@ -46,6 +38,27 @@ aside {
     width: 10%;
     float: right;
 }
+#topNav {
+    display: inline-block;
+    border-bottom: 30px solid #51110F;
+    padding: 20px;
+    background-color: #231F20;
+    position: relative;
+}
+#topNav li a {
+    text-decoration: none;
+    float: right;
+    color: #F4E8D9;
+    padding-right: 4%;
+    font-size: 1.2em;
+}
+#topNav li a img {
+    float: left;
+    width: 20%;
+    position: relative;
+    margin-bottom: -2%;
+}
+
 
 .recipeTwo {
     background-color: #F4E8D9;
@@ -249,7 +262,7 @@ footer {
     clear: both;
 }
 .footer {
-    padding-top: 120px;
+    padding-top: 80px;
     background-color: black;
 }
 footer p {
