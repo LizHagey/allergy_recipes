@@ -1,20 +1,8 @@
-<?php include '../view/header.php'; ?>
+<?php include '../../modules/header.php'; ?>
 <main>
-    
+ 
     <aside>
-        <!-- display a list of categories -->
-        <h2>Categories</h2>
-        <nav>
-        <ul>
-        <?php foreach ($categories as $category) : ?>
-            <li>
-            <a href="?category_id=<?php echo $category['categoryID']; ?>">
-                <?php echo $category['categoryName']; ?>
-            </a>
-            </li>
-        <?php endforeach; ?>
-        </ul>
-        </nav>
+        <?php include '../../modules/categories_nav.php'; ?>
     </aside>
 
     <section>
@@ -35,7 +23,7 @@
                      alt="<?php echo $recipe['imageName']; ?>"> 
                 </a> 
                
-             <table class="allergyTable">
+             <table class="allergyTableMng">
                  <tr>
                      <td><strong>Gluten Free</strong></td>
                      <td><?php echo $recipe['glutenFree']; ?></td>
@@ -68,13 +56,28 @@
                      <td><strong>Shell Fish Free</strong></td>
                      <td><?php echo $recipe['shellFishFree']; ?></td>
                  </tr>
+                 <tr>
+                     <td><strong>&nbsp;</strong></td>
+                     <td>&nbsp;</td>
+                 </tr>
+                 <tr>
+                     <td><strong>Submitted By:</strong></td>
+                     <td><?php echo $recipe['submittedBy']; ?></td>
+                 </tr>
+                 <tr>
+                     <td><strong>Source:</strong></td>
+                     <td><?php echo $recipe['source']; ?></td>
+                 </tr>
              </table>
+              
            <div class="ingred">
-             <h4>Ingredients:</h4><ul><?php echo $recipe['ingredients']; ?></ul>
-                
+
+             <h4>Ingredients:</h4><ul><?php echo $recipe['ingredients'] ; ?></ul>
+             
              <h4>Directions:</h4><ul><?php echo $recipe['directions']; ?></ul>
            </div>
-             <form action="." method="post">
+                
+             <form action="." method="post" class="delete">
                     <input type="hidden" name="action"
                            value="delete_recipe">
                     <input type="hidden" name="recipe_id"
@@ -97,4 +100,4 @@
         
     </section>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../../modules/footer.php'; ?>

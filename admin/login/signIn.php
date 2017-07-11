@@ -1,3 +1,4 @@
+<?php include '../../modules/header.php'; ?>
 <?php
 /**********************************************************
 * File: signIn.php
@@ -59,7 +60,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 			{
 				// password was correct, put the user on the session, and redirect to home
 				$_SESSION['username'] = $username;
-				header("Location: /admin/index.php");
+				header("Location: ../index.php");
 				die(); // we always include a die after redirects.
 			}
 			else
@@ -92,7 +93,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 </head>
 
 <body>
-<div>
+<div id="login_main">
 
 <?php
 if ($badLogin)
@@ -101,7 +102,7 @@ if ($badLogin)
 }
 ?>
 
-<h1>Please sign in below:</h1>
+<h1 id="login_head">Please sign in below:</h1>
 
 <form id="mainForm" action="signIn.php" method="POST">
 
@@ -119,9 +120,10 @@ if ($badLogin)
 
 <br /><br />
 
-Or <a href="../login/signUp.php">Sign up</a> for a new account.
+<p id="login_p">Or <a href="../login/signUp.php">Sign up</a> for a new account.</p>
 
 </div>
 
 </body>
+<?php include '../../modules/footer.php'; ?>
 </html>

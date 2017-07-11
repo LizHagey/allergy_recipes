@@ -95,6 +95,8 @@ switch( $action ) {
         $directions = filter_input(INPUT_POST, 'directions');
         $imageCode = filter_input(INPUT_POST, 'imageCode');
         $imageName = filter_input(INPUT_POST, 'imageName');
+        $submittedBy = filter_input(INPUT_POST, 'submittedBy');
+        $source = filter_input(INPUT_POST, 'source');
         if ($category_id == NULL || $category_id == FALSE || $recipeName == NULL || 
                 $ingredients == NULL || $directions == NULL) {
             $error = "Invalid recipe data. Check all fields and try again.";
@@ -102,7 +104,7 @@ switch( $action ) {
         } else { 
             add_recipe($category_id, $recipeName, $glutenFree, $dairyFree, $peanutFree, 
                     $treeNutFree, $eggFree, $soyFree, $fishFree, $shellFishFree, 
-                    $ingredients, $directions, $imageCode, $imageName);
+                    $ingredients, $directions, $imageCode, $imageName, $submittedBy, $source);
             header("Location: .?category_id=$category_id");
         }
         break;
@@ -131,6 +133,8 @@ switch( $action ) {
         $directions = filter_input(INPUT_POST, 'directions');
         $imageCode = filter_input(INPUT_POST, 'imageCode');
         $imageName = filter_input(INPUT_POST, 'imageName');
+        $submittedBy = filter_input(INPUT_POST, 'submittedBy');
+        $source = filter_input(INPUT_POST, 'source');
         $recipe = filter_input(INPUT_POST, 'recipeID');
         if ($category_id == NULL || $category_id == FALSE) {
             $error = "Choose a category.";
@@ -138,7 +142,7 @@ switch( $action ) {
         }else { 
             edit_recipe($recipe, $category_id, $recipeName, $glutenFree, $dairyFree, $peanutFree, 
                     $treeNutFree, $eggFree, $soyFree, $fishFree, $shellFishFree, 
-                    $ingredients, $directions, $imageCode, $imageName);
+                    $ingredients, $directions, $imageCode, $imageName, $submittedBy, $source);
             header("Location: .?category_id=$category_id");
         } 
         break;

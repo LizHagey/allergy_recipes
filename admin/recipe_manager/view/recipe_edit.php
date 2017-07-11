@@ -1,6 +1,6 @@
-<?php include '../view/header.php'; ?>
+<?php include '../../modules/header.php'; ?>
 <main>
-    <h1>Edit Recipe</h1>
+    <h1 class="recipeHead">Edit Recipe</h1>
     <div class="edit_recipe_main">
     <form action="index.php" method="post" id="edit_recipe">
         <input type="hidden" name="action" value="edit_recipe">
@@ -13,11 +13,11 @@
             </option>
         <?php endforeach; ?>
         </select>
-        <br>
+        <br><br>
 
         <label>Name:</label>
         <input type="text" name="recipeName" value='<?php echo htmlspecialchars($recipe['recipeName'])?>'/>
-        <br>
+        <br><br>
         
         <input type="checkbox" id="allergy" name="glutenFree" <?php if ($recipe['glutenFree'] == 'y') echo 'checked'; ?>>Gluten Free<br>
         
@@ -36,20 +36,28 @@
         <input type="checkbox" id="allergy" name="shellFishFree" <?php if ($recipe['shellFishFree'] == 'y') echo 'checked'?>>Shell Fish Free<br>
         <br>
 
-        <label>Ingredients:</label>
+        <label>Ingredients:</label><br>
         <textarea name="ingredients" cols="30" rows="20" ><?php echo $recipe['ingredients'] ?></textarea>
         <br><br>
         
-        <label>Directions: </label>
+        <label>Directions: </label><br>
         <textarea name="directions" cols="30" rows="20"><?php echo $recipe['directions']?></textarea>
         <br><br>
         
         <label>Image Code:</label>
         <input type="text" name="imageCode" value='<?php echo htmlspecialchars($recipe['imageCode'])?>'/>
-        <br>
+        <br><br>
         
         <label>Image Name:</label>
         <input type="text" name="imageName" value='<?php echo htmlspecialchars($recipe['imageName'])?>'/>
+        <br><br>
+        
+        <label>Submitted By:</label>
+        <input type="text" name="submittedBy" value='<?php echo htmlspecialchars($recipe['submittedBy'])?>'/>
+        <br><br>
+        
+        <label>Source:</label>
+        <input type="text" name="source" value='<?php echo htmlspecialchars($recipe['source'])?>'/>
         <br><br><br>
 
         <input type="hidden" name="recipeID" value='<?php echo $recipe['recipeID']?>'/>
@@ -57,12 +65,16 @@
         
         <label>&nbsp;</label>
         <input type="submit" value="Edit Recipe" />
+        
+        <div class="manageRecipes">
+        <a href="index.php?action=list_recipes">View Recipe List</a>
+        <a href="/admin/img_upload/">Click here to add image</a>
+    </div>
         <br>
     </form>
-    <p class="last_paragraph">
-        <a href="index.php?action=list_recipes">View Recipe List</a>
-    </p>
+    
+    
     </div>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../../modules/footer.php'; ?>
 

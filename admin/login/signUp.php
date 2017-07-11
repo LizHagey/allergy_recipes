@@ -1,3 +1,4 @@
+<?php include '../../modules/header.php'; ?>
 <?php
 /**********************************************************
 * File: singup.php
@@ -41,4 +42,5 @@
 </div>
 
 </body>
+<?php include '../../modules/footer.php'; ?>
 </html>

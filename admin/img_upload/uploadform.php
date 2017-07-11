@@ -1,17 +1,17 @@
-<?php include '../view/header.php'; ?>
-<!DOCTYPE html>
-<html>
+<?php include '../../modules/header.php'; ?>
+
 <head>
     <title>Upload Image</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    
 </head>
-<body>
+
     <h2 class="recipeHead">Upload Image</h2>
     
     <main id="upload_image_main">
         <h2>Images to be uploaded</h2>
-       
-        <form id="upload_form"
+      <div id="upload_image" class="upload"> 
+         
+        <form id="upload_form" 
               action="." method="POST"
               enctype="multipart/form-data">
             <input type="hidden" name="action" value="upload">
@@ -19,6 +19,7 @@
             
             <input id="upload_button" type="submit" value="Upload">
         </form>
+      </div>
         <br>
         <h2>Images in the directory</h2>
         <?php if (count($files) == 0) : ?>
@@ -44,6 +45,6 @@
             <p class="manageRecipes"><a href="../recipe_manager/index.php">Return to Recipe Manager</a></p>
             <br><br><br>
     </main>
-</body>
-</html>
-<?php include '../view/footer.php'; ?>
+
+
+<?php include '../../modules/footer.php'; ?>
