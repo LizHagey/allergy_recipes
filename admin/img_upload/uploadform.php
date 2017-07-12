@@ -4,6 +4,15 @@
     <title>Upload Image</title>
     
 </head>
+        <p class="manageRecipes"><a href="../recipe_manager/view/recipe_add.php">Add Recipe</a></p>
+        <p class="manageRecipes"><a href="../recipe_manager/view/category_list.php">List Categories</a></p>
+        <p class="manageRecipes">
+            <a href="../recipe_manager/index.php">View Recipe List</a>
+        </p>
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+        </p>
+        <br>
 
     <h2 class="recipeHead">Upload Image</h2>
     
@@ -20,6 +29,11 @@
             <input id="upload_button" type="submit" value="Upload">
         </form>
       </div>
+        <br><br>
+        <h2>Remember the name of your image, as it will be needed when you add the recipe</h2>
+        <p class="manageRecipes"><a href="../recipe_manager/view/recipe_add.php">Return to Add Recipe Page</a></p>
+         <p class="manageRecipes"><a href="../recipe_manager/index.php">Return to Recipe List</a></p>
+            <br><br>
         <br>
         <h2>Images in the directory</h2>
         <?php if (count($files) == 0) : ?>
@@ -42,7 +56,6 @@
             </ul>
         <?php endif; ?>
                       
-            <p class="manageRecipes"><a href="../recipe_manager/index.php">Return to Recipe Manager</a></p>
             <br><br><br>
     </main>
 

@@ -1,11 +1,24 @@
 <?php include '../../modules/header.php'; ?>
 <main>
-
+        <p class="manageRecipes"><a href="?action=show_add_form">Add Recipe</a></p>
+        <p class="manageRecipes"><a href="?action=list_categories">List Categories</a></p>
+        <p class="manageRecipes">
+            <a href="index.php?action=list_recipes">View Recipe List</a>
+        </p>
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+        </p>
+        <br>
 <!--Add Recipe Section-->
     <h1 class="recipeHead">Add Recipe</h1>
     <form action="index.php" method="post" id="add_recipe_form">
         <input type="hidden" name="action" value="add_recipe">
 <div class="add_recipe_main">
+    
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+        </p><br><br>
+        
         <label>Category:</label>
         <select name="category_id">
         <?php foreach ( $categories as $category ) : ?>
@@ -46,11 +59,7 @@
         <textarea name="directions" cols='30' rows='20'></textarea>
         <br><br>
         
-<!--        <button id="uploadImage">Upload Image</button><br><br>-->
-        <p class="manageRecipes">
-            <a href="/admin/img_upload/">Click here to add image</a>
-        </p><br><br>
-        
+             
         <label>Short Image Description: <br><i>ex. if picture is of 2 tacos on a plate you can just put, "Two Tacos"</i></label>
         <br><input type="text" name="imageName" placeholder="Two Tacos"/>
         <br><br>
@@ -75,7 +84,7 @@
         </p>
     
         <p class="manageRecipes">
-        <a href="index.php?action=list_recipes">View Recipe List</a>
+        <a href="../index.php">Return to Recipe List</a>
     </p>
     <br>
     </form>

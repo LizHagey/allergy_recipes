@@ -146,7 +146,6 @@ main {
    font-size: 1.4em;
 }
 input[type=submit] {
-/*    width: 12%;*/
     padding: 15px;
     padding-right: 30px;
     padding-left: 30px;
@@ -163,8 +162,28 @@ input[type=submit] {
     -webkit-border-radius: .3em;
     float: left;
 }
+input[type=submit]:hover {
+    color: rgb(208, 133, 4);
+}
+#deleteButton {
+    padding: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+    background-color: #801815;
+    border: none;
+    font-size: 1em;
+    margin: 10px;
+    margin-top: 25px;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
+     border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    float: left;
+}
 #checklist>form>input[type=submit] {
-/*    width: 80%;*/
     padding: 15px;
     padding-right: 30px;
     padding-left: 30px;
@@ -184,7 +203,6 @@ input[type=submit] {
 
 /*Action Buttons*/
 .manageRecipes {
-/*    width: 10%;*/
     padding: 15px;
     padding-right: 30px;
     padding-left: 30px;
@@ -193,6 +211,7 @@ input[type=submit] {
     border: none;
     font-size: 1em;
     margin: 10px;
+    text-decoration: none;
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
     -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -4px 2px rgba(0, 0, 0, .4);
@@ -327,8 +346,9 @@ li {
     padding-bottom: 0.5em;
 }
 a {
-    color: #F4E8D9;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
 }
 a:hover {
     color: rgb(208, 133, 4);

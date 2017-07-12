@@ -1,4 +1,16 @@
+<head>
 <?php include '../../modules/header.php'; ?>
+    <script>
+        function confirmDelete()
+    {
+      var x = confirm("Are you sure you want to delete this recipe?");
+      if (x)
+          return true;
+      else
+        return false;
+    }
+    </script>
+</head>
 <main>
  
     <aside>
@@ -8,6 +20,12 @@
     <section>
         <p class="manageRecipes"><a href="?action=show_add_form">Add Recipe</a></p>
         <p class="manageRecipes"><a href="?action=list_categories">List Categories</a></p>
+        <p class="manageRecipes">
+            <a href="index.php?action=list_recipes">View Recipe List</a>
+        </p>
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+        </p>
         <br>
         
         <!-- display recipes -->
@@ -84,16 +102,16 @@
                            value="<?php echo $recipe['recipeID']; ?>">
                     <input type="hidden" name="category_id"
                            value="<?php echo $recipe['categoryID']; ?>">
-                    <input type="submit" value="Delete">
+                    <input type="submit" id="deleteButton" onclick="return confirmDelete();" value="Delete">
                  </form>
+                
              <form action="index.php" method="post" id="edit_recipe">
                     <input type="hidden" name="action"
                            value="show_edit_form">
                     <input type="hidden" name="recipe_id"
                            value="<?php echo $recipe['recipeID']; ?>">
-                    
-                    
                     <input type="submit" value="Edit">
+                    
                  </form>
         </div>  <br><br> 
              <?php endforeach; ?>

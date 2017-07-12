@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<div>
+    <div class="sidePageMainSection">
 
 <h1>Sign up for new account</h1>
 
@@ -37,10 +37,10 @@
 	<input type="submit" value="Create Account" />
 
 </form>
-
+<br><br><br>
 
 </div>
 
 </body>
-<?php include '../../modules/footer.php'; ?>
+
 </html>

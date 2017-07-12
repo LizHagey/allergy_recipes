@@ -1,5 +1,15 @@
 <?php include '../../modules/header.php'; ?>
 <main>
+    <p class="manageRecipes"><a href="?action=show_add_form">Add Recipe</a></p>
+        <p class="manageRecipes"><a href="?action=list_categories">List Categories</a></p>
+        <p class="manageRecipes">
+            <a href="index.php?action=list_recipes">View Recipe List</a>
+        </p>
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+    </p>
+    <br>
+        
     <h1 class="recipeHead">Edit Recipe</h1>
     <div class="edit_recipe_main">
     <form action="index.php" method="post" id="edit_recipe">
@@ -66,10 +76,7 @@
         <label>&nbsp;</label>
         <input type="submit" value="Edit Recipe" />
         
-        <div class="manageRecipes">
-        <a href="index.php?action=list_recipes">View Recipe List</a>
-        <a href="/admin/img_upload/">Click here to add image</a>
-    </div>
+        
         <br>
     </form>
     

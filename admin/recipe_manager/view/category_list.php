@@ -1,8 +1,18 @@
 <?php include '../../modules/header.php'; ?>
 <main>
-
+        <p class="manageRecipes"><a href="?action=show_add_form">Add Recipe</a></p>
+        <p class="manageRecipes"><a href="?action=list_categories">List Categories</a></p>
+        <p class="manageRecipes">
+            <a href="index.php?action=list_recipes">View Recipe List</a>
+        </p>
+        <p class="manageRecipes">
+            <a href="/admin/img_upload/">Click here to add image</a>
+        </p>
+        <br>
     <h1 class="recipeHead">Category List</h1>
     <div class="edit_category">
+         <p class="manageRecipes"><a href="../recipe_manager/index.php">Return to Recipe List</a></p>
+         <br><br>
     <table id="categoryTable">
         <tr>
             <th>Category Name</th>
@@ -32,7 +42,7 @@
     <h2>Add Category</h2>
     <!-- add code for form here -->
 
-    <p><a href="index.php?action=list_recipes">List Recipes</a></p>
+    <br><br>
 </div>
 </main>
 <?php include '../../modules/footer.php'; ?>
