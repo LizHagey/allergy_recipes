@@ -1,28 +1,16 @@
 <?php session_start(); ?>
-<!DOCTYPE html>
+
 <!--
 Contact Page
 -->
+<?php include '../modules/header.php'; ?>
 
-<html>
-    <head>
-        <title>Contact Page | Top allergy free recipes</title>
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '/Modules/head.php'; ?>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <meta name="description" content="Contact Page for topallergyfreerecipes.com">
-    </head>
-    
-    <body>
         <div>
-        <header id="pageHeader">
-          <?php include $_SERVER['DOCUMENT_ROOT'] . '/Modules/header.php'; ?>
-        </header>
-          <nav>
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/Modules/navigation.php'; ?>           
-          </nav>
-        <main>
-            <h1>Contact Me</h1> 
+        
+        
+            <h1 class="recipeHead">Contact Me</h1> 
+            
+            <main class="sidePageMainSection">
             <?php
                 if(!empty($errors)){
                     echo '<ul class="notify">';
@@ -35,11 +23,11 @@ Contact Page
                 ?>
             <p>Please contact me using the provided form. All fields are required.</p>
             <form method="post" action="." id="contactform">                <label for="name">Name:</label><br>
-                <input type="text" name="name" id="name" size="50" value="<?php echo $name;  ?>" required> <br>
+                <input type="text" name="name" id="name" size="50" value="<?php echo $name;  ?>" required> <br><br>
                 <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" size="50" value="<?php echo $email;  ?>" required><br>
+                <input type="email" name="email" id="email" size="50" value="<?php echo $email;  ?>" required><br><br>
                 <label for="subject">Subject</label><br>
-                <input type="text" name="subject" id="subject" size="50" value="<?php echo $subject;  ?>" required><br>
+                <input type="text" name="subject" id="subject" size="50" value="<?php echo $subject;  ?>" required><br><br>
                 <label for="message">Message</label><br>
                 <textarea name="message" id="message" cols="50" rows="10" required><?php echo $message;  ?></textarea><br><br>
                
@@ -54,11 +42,9 @@ Contact Page
             </form>
 
         </main>
-            <footer>
-             <?php include $_SERVER['DOCUMENT_ROOT'] . '/Modules/footer.php'; ?>    
-            </footer>
+           
         </div>
        
     </body>
-</html>
+<?php include '../modules/footer.php'; ?>
 
