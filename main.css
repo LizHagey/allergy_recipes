@@ -372,11 +372,12 @@ br {
 #left_column {
     float: left;
     width: 400px;
+    max-width: 100%;
     padding-left: 1.5em;
     text-align: center;
 }
 #mainImg {
-    width: 100%;
+    max-width: 100%;
 }
 #right_column {
     float: left;
@@ -611,6 +612,24 @@ h1#add_recipe_head {
         display: block;
     }
     
+    /*    View Recipe Page*/
+    #recipeViewHeading {
+        width: 50%;
+        margin-bottom: -4.6%;
+        margin-left: 2.5%;
+    }
+    .recipeViewMain {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    #mainImg {
+       margin-left: -12%;
+       width: 90%;
+    }
+    #right_column {
+        width: 90%;
+    }
+    
 /*    Info, About Me Etc... pages*/
     .sidePageMainSection {
         width: 80%;
@@ -768,6 +787,23 @@ h1#add_recipe_head {
         width: 80%;
         margin: auto;
     }
+    /*    View Recipe Page*/
+    #recipeViewHeading {
+        width: 250px;
+        margin-bottom: -4.6%;
+        margin-left: 10%;
+    }
+    .recipeViewMain {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #mainImg {
+       margin-left: -12%;
+       width: 90%;
+    }
+    #right_column {
+        width: 90%;
+    }
     /*    Contact Page*/
     input[type=text] {
         width: 95%;
@@ -870,6 +906,14 @@ h1#add_recipe_head {
         position: relative;
         
     }
+/*    View Recipe Page*/
+    #recipeViewHeading {
+        width: 25%;
+    }
+    #right_column {
+        width: 80%;
+    }
+    
     /*    Info, About Me Etc... pages*/
     .sidePageMainSection {
          margin-left: 13%;

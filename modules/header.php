@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/main.css" media="screen"/>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="javascript.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="/images/LogoRecipeBoxFavicon.png" sizes="16x16">
     
 </head>
 
@@ -23,6 +24,10 @@
             <li><a href="/contact/contact.php">Contact</a></li>
             
         </ul>
+<!--        <div class="search-box">
+        <input type="text" autocomplete="off" placeholder="Search recipes..." />
+        <div class="result"></div>
+    </div>-->
         
 <!--        <a class="toggle-nav" href="#">&#9776;</a>
  
